@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #333;
+  font-family: 'Helvitica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  height: 100vh;
+  line-height: 1.42857143;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 3px 1fr;
+  grid-template-columns: 1fr 3px 1fr;
+  height: 100vh;
+}
+
+.gutter-col {
+  grid-row: 1/-1;
+  border: solid 1px #fff;
+  cursor: col-resize;
+}
+
+.gutter-col-1 {
+  grid-column: 2;
+}
+
+.gutter-row {
+  grid-column: 1/-1;
+  border: solid 1px #fff;
+  cursor: row-resize;
+}
+
+.gutter-row-1 {
+  grid-row: 2;
+}
+
+textarea {
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: calc(100% - 22px) calc(100% - 20px);
+  box-shadow: 0 0 0 .2px rgba(255, 255, 255, .3);
+  color: #fff;
+  font-family: monospace;
+  height: 100%;
+  padding: 24px;
+  resize: none;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+#js {
+  background-image: url('/assets/js.svg');
+}
+#html {
+  background-image: url('/assets/html5.svg');
+}
+#css {
+  background-image: url('/assets/css3.svg')
+}
+
+iframe {
+  background: #fff;
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
